@@ -25,9 +25,12 @@ void HBImageView::configImage(const QPixmap map, HBContentMode mode)
         if ((float)w / (float) h > (float)map.width() / (float)map.height()) {
             //相对 图为竖图
             h = (float)map.width() / (float)w * map.height();
+           h = qMax(h, height());
+
         } else {
             //相对 图为横图
             w = (float)map.height() / (float)h * map.width();
+            w = qMax(w, width());
         }
 
      } else {

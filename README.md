@@ -10,4 +10,4 @@ QPixmap map;
 imgView->configImage(map, HBImageView::KeepAspectCenter);
 ```
 
-![]()
+![](snap.png)
